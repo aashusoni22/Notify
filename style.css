@@ -1,0 +1,101 @@
+.notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.newNote {
+  border: 1px solid slategrey;
+  height: auto;
+  width: 300px;
+  border-radius: 5px;
+  padding: 15px;
+  animation: fadeInUp 0.5s ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.newNote.loaded {
+  max-height: 350px; /* Adjust based on your note's height */
+}
+
+.textAreaInNewNote {
+  border-radius: 5px;
+  resize: none;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: rgb(51, 51, 51);
+}
+
+.textAreaInNewNote {
+  background-color: #ffffff; /* Light background */
+  color: #1b1d20; /* Black text */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.bg-dark .textAreaInNewNote {
+  background-color: #262b30; /* Darker background for Dark Mode */
+  color: #ffffff; /* White text for visibility */
+}
+
+body.bg-dark .textAreaInNewNote::placeholder {
+  color: #d8d8d8;
+}
+
+.actionBtns {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.alertMsg {
+  display: none;
+}
+
+.dateTimeDetails {
+  text-align: start;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchInput {
+  width: 20em;
+}
+
+.counter {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.noteFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.alertContainer {
+  top: 12%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

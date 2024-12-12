@@ -99,3 +99,35 @@ body.bg-dark .textAreaInNewNote::placeholder {
     transform: translateY(0);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .newNote {
+    width: 100%;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .alertContainer {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newNote {
+    width: 100%;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .alertContainer {
+    top: 10px;
+  }
+
+  .modeBtn {
+    margin-top: 10px;
+  }
+}
